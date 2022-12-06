@@ -33,7 +33,7 @@ struct cell_map_t{
 
 // Prints the provided @value either as a char or as an integer
 void print(int value){
-    if (value >= 58 && value <= 126){ // Autoconvert if it's readable chars!
+    if (value >= 32 && value <= 57 || value >= 58 && value <= 126){ // Autoconvert if it's readable chars!
         std::cout << (char)value;
     }else{
         std::cout << value;
