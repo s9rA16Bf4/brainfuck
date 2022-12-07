@@ -44,7 +44,6 @@ void print(int value){
 // Parses the input file and executes the instructions found
 void parsing_n_execution(std::string line, int line_number, bool step_by_step){
     for (int i = 0; i < line.size(); i++){
-        
         if (step_by_step){
             step_by_step_view(line[i]);
         }
@@ -97,9 +96,9 @@ void parsing_n_execution(std::string line, int line_number, bool step_by_step){
             case ']':{ // End of the while loop
                 int location = i;
                 
-                while(location > 0 && line[location] != '[') { location--; }
+                while(location >= 0 && line[location] != '[') {location--; }
 
-                if (location == 0){
+                if (line[location] != '['){
                     runtime_error("Failed to find '[' in a while-clause", line_number, i);
                 }
 
@@ -119,6 +118,11 @@ void parsing_n_execution(std::string line, int line_number, bool step_by_step){
             case ',': // Grab an input from the user
                 cell_map.grid[cell_map.index] = getchar();
                 break;
+
+            default: // Ignore everything else
+                continue;
+                break;
+
         }
         
     }
