@@ -6,6 +6,9 @@ It's a language that you can keep quite simple and you can also torture yourself
 ## Grid
 We utilize a horizontal grid consisting of 30k cells, where the default value of each cell is zero.
 
+![image](https://user-images.githubusercontent.com/14398606/206283242-4c5924e3-4690-40d9-bc95-3334bd8af4bb.png)
+
+
 ## Rule set
 Standard brainfuck supports 8 different operators.
 
