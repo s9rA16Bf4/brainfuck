@@ -5,7 +5,6 @@ struct cell_map_t{
     int* grid;
     int index;
     int max;
-    int index_of_while;
 
     cell_map_t(){
         this->max = 30000; // Default value
@@ -20,7 +19,6 @@ struct cell_map_t{
     void default_init(){
         this->grid = (int*)calloc(this->max, sizeof(int)); // Allocate our array
         this->index = 0;
-        this->index_of_while = -1;
     }
     
     ~cell_map_t(){
